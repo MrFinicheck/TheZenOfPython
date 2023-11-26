@@ -19,7 +19,7 @@ if __name__ == '__main__':
             break
 
         elif command == 'add':
-        # Запросить данные о работнике.
+            # Запросить данные о работнике.
             name = input("Фамилия и инициалы? ")
             post = input("Должность? ")
             year = int(input("Год поступления? "))
@@ -74,9 +74,9 @@ if __name__ == '__main__':
             for worker in workers:
                 if today.year - worker.get('year', today.year) >= period:
                     count += 1
-            print(
-                '{:>4}: {}'.format(count, worker.get('name', ''))
-            )
+                    print(
+                        '{:>4}: {}'.format(count, worker.get('name', ''))
+                    )
 
             # Если счетчик равен 0, то работники не найдены.
             if count == 0:
